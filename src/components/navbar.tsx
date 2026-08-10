@@ -1,20 +1,17 @@
-import { useState } from "react";
-
-
+import { useEffect } from "react";
+import { useNavBar } from "./hooks";
 
 
 export const NavBar = () => {
 
-	const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-	const [themeIcon, setThemeIcon] = useState(theme === "light" ? "☀️" : "🌙");
+	const { 
+		theme, themeIcon, 
+		handleThemeToggle, setIconAndClass 
+	} = useNavBar();
 
-	const handleThemeToggle = () => {
-		const newTheme = theme === "light" ? "dark" : "light";
-		setTheme(newTheme);
-		setThemeIcon(newTheme === "light" ? "☀️" : "🌙");
-		localStorage.setItem("theme", newTheme);
-		document.body.classList.toggle("dark", newTheme === "dark");
-	}
+	useEffect(() => {
+		setIconAndClass(theme);
+	}, []);
 
 	return (
 		<header className="navbar">
