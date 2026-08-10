@@ -1,17 +1,12 @@
-import { useEffect } from "react";
 import { useNavBar } from "./hooks";
 
 
 export const NavBar = () => {
 
 	const { 
-		theme, themeIcon, 
-		handleThemeToggle, setIconAndClass 
+		themeIcon, 
+		handleThemeToggle 
 	} = useNavBar();
-
-	useEffect(() => {
-		setIconAndClass(theme);
-	}, []);
 
 	return (
 		<header className="navbar">

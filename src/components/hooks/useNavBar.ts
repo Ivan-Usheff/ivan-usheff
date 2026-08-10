@@ -1,42 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
+type Theme = "light" | "dark";
 
-const InitialTheme = () => {
-	return localStorage.getItem("theme") || "light";
-}
-
-const getIcon = (theme:string) => {
-  return theme === "light" ? "☀️" : "🌙";
-}
-
-const InitialThemeIcon = () => {
-	const theme = InitialTheme();
-	return getIcon(theme);
+const InitialTheme = (): Theme => {
+  return localStorage.getItem("theme") === "dark"
+    ? "dark"
+    : "light";
 }
 
 
 export const useNavBar = () => {
 
 	const [theme, setTheme] = useState(InitialTheme());
-	const [themeIcon, setThemeIcon] = useState(InitialThemeIcon());
+  const themeIcon = theme === "light" ? "🌙" : "☀️";
 
-	const setIconAndClass	= (newTheme: string) => {
-		setThemeIcon(getIcon(newTheme));
-		document.body.classList.toggle("dark", newTheme === "dark");
+	const setIconAndClass	= () => {
+    document.body.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
 	}
 
 	const handleThemeToggle = () => {
-		const newTheme = theme === "light" ? "dark" : "light";
-		setTheme(newTheme);
-		setIconAndClass(newTheme);
-		localStorage.setItem("theme", newTheme);
+    setTheme(current =>
+      current === "light" ? "dark" : "light"
+    );
 	}
 
+	useEffect(() => {
+		setIconAndClass();
+	}, [theme]);
+  
   return {
-    theme,
-    themeIcon,
-    handleThemeToggle,
-    setIconAndClass
+    themeIcon, 
+    handleThemeToggle
   }
 
 }
