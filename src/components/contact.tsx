@@ -1,6 +1,21 @@
+import type { ContactType } from "../types"
 
 
-export const Contact = () => {
+export const Contact = (props: ContactType) => {
+
+  const { message, links } = props
+
+  const linksList = () => {
+    return links.map((link, index) => {
+      const { name, url, icon, target } = link;
+      return(
+        <a key={index} href={url} target={target ? "_blank" : "_self"} rel={target ? "noopener noreferrer" : undefined} >
+            {name}
+        </a>
+      )
+    })
+  }
+
   return (
     <section id="contact" className="section section-alt">
       <div className="container contact">
@@ -9,25 +24,10 @@ export const Contact = () => {
           Contacto
         </h2>
 
-        <p>
-          Estoy interesado en nuevas oportunidades profesionales
-          relacionadas con desarrollo Backend y Full Stack.
-        </p>
+        <p>{message}</p>
 
         <div className="contact-links">
-
-          <a href="mailto:tu-email@gmail.com">
-            Email
-          </a>
-
-          <a href="https://github.com/Ivan-Usheff" target="_blank">
-            GitHub
-          </a>
-
-          <a href="#" target="_blank">
-            LinkedIn
-          </a>
-
+          {linksList()}
         </div>
 
       </div>

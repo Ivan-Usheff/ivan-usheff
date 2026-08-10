@@ -1,7 +1,23 @@
+import type { HeroType } from "../types"
 
 
 
-export const Hero = () => {
+export const Hero = (props: HeroType) => {
+
+	const { name, lastName, role, description, image, links } = props;
+
+
+	const actionsLinks = () => {
+		return links.map((link, index) => {
+			const { name, url, icon, target } = link;
+			return (
+				<a key={index} href={url} target={target ? "_blank" : undefined} rel="noopener noreferrer"
+					className="button secondary">
+					{name}
+				</a>
+			)
+		})
+	}
 
 	return (
 		<section className="hero">
@@ -12,17 +28,15 @@ export const Hero = () => {
 				</p>
 
 				<h1>
-					Ivan Usheff
+					{name} {lastName}
 				</h1>
 
 				<h2>
-					Backend / Full Stack Developer
+					{role}
 				</h2>
 
 				<p className="hero-description">
-					Desarrollador de software especializado en aplicaciones backend,
-					APIs y arquitecturas de microservicios utilizando principalmente
-					TypeScript, NestJS y Node.js.
+					{description}
 				</p>
 
 				<div className="hero-actions">
@@ -30,11 +44,8 @@ export const Hero = () => {
 					<a href="#projects" className="button primary">
 						Ver proyectos
 					</a>
-
-					<a href="https://github.com/Ivan-Usheff" target="_blank" rel="noopener noreferrer"
-						className="button secondary">
-						GitHub
-					</a>
+					
+					{actionsLinks()}
 
 				</div>
 

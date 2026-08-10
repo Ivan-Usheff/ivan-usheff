@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { NavBarPropsType } from "../../types/components";
 
 type Theme = "light" | "dark";
 
@@ -9,8 +10,9 @@ const InitialTheme = (): Theme => {
 }
 
 
-export const useNavBar = () => {
+export const useNavBar = (props: NavBarPropsType) => {
 
+  const { name, lastName } = props;
 	const [theme, setTheme] = useState(InitialTheme());
   const themeIcon = theme === "light" ? "🌙" : "☀️";
 
@@ -25,13 +27,20 @@ export const useNavBar = () => {
     );
 	}
 
+  const getInitials = () => {
+    const firstInitial = name.charAt(0).toUpperCase();
+    const lastInitial = lastName.charAt(0).toUpperCase();
+    return `${firstInitial}${lastInitial}`;
+  }
+
 	useEffect(() => {
 		setIconAndClass();
 	}, [theme]);
   
   return {
     themeIcon, 
-    handleThemeToggle
+    handleThemeToggle,
+    getInitials
   }
 
 }

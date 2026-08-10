@@ -1,19 +1,22 @@
 import { useNavBar } from "./hooks";
 
+import type { NavBarPropsType } from "../types/components";
 
-export const NavBar = () => {
+
+export const NavBar = (props:NavBarPropsType) => {
 
 	const { 
 		themeIcon, 
-		handleThemeToggle 
-	} = useNavBar();
+		handleThemeToggle,
+		getInitials 
+	} = useNavBar(props);
 
 	return (
 		<header className="navbar">
 			<div className="container navbar-content">
 
 				<a href="#" className="logo">
-					IU<span>.</span>
+					{getInitials()}<span>.</span>
 				</a>
 
 				<nav>
