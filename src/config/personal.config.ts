@@ -8,7 +8,7 @@ export const PERSONAL_CONFIG:ConfigType = {
     lastName: "Usheff",
     role: "Backend / Full Stack Developer",
     description: "Desarrollador de software especializado en aplicaciones backend, APIs y arquitecturas de microservicios utilizando principalmente TypeScript, NestJS y Node.js.",
-    cv: "Ivan_Usheff_CV.pdf",
+    cv: "Ivan_Usheff_cv.pdf",
     links: [
       {
         name: "GitHub",
