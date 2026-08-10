@@ -43,8 +43,6 @@ Config Service permite administrar configuraciones relacionadas con:
 
 ## 🏗️ Arquitectura
 
-![Arquitectura de Config Service](docs/config-service-architecture.png)
-
 El servicio utiliza una arquitectura modular basada en NestJS.
 
 La lógica está dividida en controllers, services y repositories,
@@ -55,22 +53,18 @@ separando las responsabilidades de acceso a datos y lógica de negocio.
 
 Un servicio solicita su configuración:
 
-Service A
-    |
-    | GET /api/config/...
-    v
-Config Service
-    |
-    v
-PostgreSQL
-    |
-    | Service configuration
-    v
-Config Service
-    |
-    v
-Service A
-
+```mermaid
+flowchart TD
+    id1[(PostgreSQL)]
+	--> 
+    id2["CONFIG SERVICE"]
+    id3["AUTH-BFF"]
+    id4["ADMIN-SERVICE"]
+    id5["COMPANY-SERVICE"]
+    id2 --> id3
+    id2 --> id4
+    id2 --> id5
+```
 
 ## 🛠️ Tecnologías
 
@@ -96,6 +90,8 @@ El proyecto utiliza Swagger para documentar los endpoints disponibles.
 Una vez iniciado el servicio, la documentación puede consultarse desde:
 
 http://localhost:<PORT>/api
+
+![Arquitectura de Config Service](docs/config-service-architecture.png)
 
 
 ## 🐳 Docker

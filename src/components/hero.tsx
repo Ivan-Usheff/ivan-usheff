@@ -4,12 +4,12 @@ import type { HeroType } from "../types"
 
 export const Hero = (props: HeroType) => {
 
-	const { name, lastName, role, description, image, links } = props;
+	const { name, lastName, role, description, links } = props;
 
 
 	const actionsLinks = () => {
 		return links.map((link, index) => {
-			const { name, url, icon, target } = link;
+			const { name, url, target } = link;
 			return (
 				<a key={index} href={url} target={target ? "_blank" : undefined} rel="noopener noreferrer"
 					className="button secondary">

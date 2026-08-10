@@ -26,7 +26,7 @@ export const Projects = (props: ProjectType) => {
           <div className="project-links">
             {
               links.map((link, linkIndex) => {
-                const { name, url, icon, target } = link;
+                const { name, url, target } = link;
                 return (
                   <a key={linkIndex} href={url} target={target ? "_blank" : undefined}>
                     {name} →

@@ -77,6 +77,11 @@ export const PERSONAL_CONFIG:ConfigType = {
             url: "#",
             icon: "github",
             target: true
+          },
+          {
+            name: "Ver mas", 
+            url: "https://github.com/Ivan-Usheff/ivan-usheff/blob/main/src/config/readme/config_service.md",
+            target: true
           }
         ]
       },
