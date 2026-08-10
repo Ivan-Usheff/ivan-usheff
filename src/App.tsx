@@ -15,7 +15,7 @@ function App() {
         <Projects {...projects} />
         <Contact {...contact} />
       </main>
-      <Footer />
+      <Footer name={hero.name} lastName={hero.lastName} />
     </>
   )
 }

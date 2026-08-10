@@ -18,7 +18,7 @@ export const PERSONAL_CONFIG:ConfigType = {
     ]
   },
   about: {
-    description: "Soy desarrollador de software con experiencia en desarrollo backend, integración de sistemas y diseño de servicios. Me interesa especialmente trabajar en arquitecturas escalables, APIs, microservicios y soluciones que permitan resolver problemas reales mediante software.",
+    description: "Soy desarrollador de software y vivo en Chile desde hace 8 años. Mi camino en tecnología comenzó con estudios en desarrollo de videojuegos, donde adquirí mis primeras bases de programación. Durante la pandemia decidí convertir ese interés en una profesión y comencé a formarme de manera autodidacta, desarrollando proyectos y profundizando mis conocimientos hasta conseguir mi primera oportunidad laboral como desarrollador. \nDesde entonces he trabajado en proyectos para Sbpay, Cencosud y Walmart Chile, participando en desarrollo backend y full stack, integración de sistemas y arquitecturas basadas en servicios. Actualmente trabajo principalmente con TypeScript, NestJS, Node.js, Java, Spring Boot, PostgreSQL, MongoDB y Docker. Busco seguir creciendo como desarrollador, enfrentar desafíos técnicos más complejos y aportar en equipos donde pueda continuar aprendiendo y construyendo soluciones de calidad.",
     image: "",
     media: []
   },
