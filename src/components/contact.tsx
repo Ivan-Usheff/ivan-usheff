@@ -7,7 +7,7 @@ export const Contact = (props: ContactType) => {
 
   const linksList = () => {
     return links.map((link, index) => {
-      const { name, url, icon, target } = link;
+      const { name, url, target } = link;
       return(
         <a key={index} href={url} target={target ? "_blank" : "_self"} rel={target ? "noopener noreferrer" : undefined} >
             {name}

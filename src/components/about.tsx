@@ -4,7 +4,7 @@ import type { AboutType } from "../types"
 
 export const About = (props:AboutType) => {
 
-  const { description, image, media } = props;
+  const { description } = props;
 
   return (
     <section id="about" className="section">
