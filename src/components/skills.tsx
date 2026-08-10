@@ -1,6 +1,19 @@
+import type { SkillType } from "../types"
 
 
-export const Skills = () => {
+export const Skills = (props: {skills: SkillType[]}) => {
+
+	const skills = () => {
+		if(props.skills.length === 0) 
+			return null;
+		return props.skills.map((skill, index) => {
+			const { name, level, experience } = skill;
+			return (
+				<span key={index}>{name} {level ? `(${level})` : ''} {experience && `(${experience} años)`}</span>
+			)
+		})
+	}
+
 	return (
 		<section id="skills" className="section section-alt">
 			<div className="container">
@@ -11,18 +24,7 @@ export const Skills = () => {
 
 				<div className="skills">
 
-					<span>TypeScript</span>
-					<span>JavaScript</span>
-					<span>Node.js</span>
-					<span>NestJS</span>
-					<span>React</span>
-					<span>PostgreSQL</span>
-					<span>MongoDB</span>
-					<span>TypeORM</span>
-					<span>Docker</span>
-					<span>Git</span>
-					<span>WebSockets</span>
-					<span>Microservices</span>
+					{skills()}
 
 				</div>
 

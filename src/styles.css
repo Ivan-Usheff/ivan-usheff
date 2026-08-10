@@ -254,8 +254,9 @@ nav a:hover {
   line-height: 1.8;
 
   color: var(--text-secondary);
+  
+  white-space: pre-line;
 }
-
 
 /* =========================
    SKILLS

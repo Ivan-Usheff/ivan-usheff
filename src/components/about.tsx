@@ -1,7 +1,11 @@
+import type { AboutType } from "../types"
 
 
 
-export const About = () => {
+export const About = (props:AboutType) => {
+
+  const { description, image, media } = props;
+
   return (
     <section id="about" className="section">
       <div className="container">
@@ -11,12 +15,7 @@ export const About = () => {
         </h2>
 
         <p className="about-text">
-          Soy desarrollador de software con experiencia en desarrollo
-          backend, integración de sistemas y diseño de servicios.
-
-          Me interesa especialmente trabajar en arquitecturas escalables,
-          APIs, microservicios y soluciones que permitan resolver problemas
-          reales mediante software.
+          {description}
         </p>
 
       </div>

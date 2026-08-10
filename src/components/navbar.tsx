@@ -1,27 +1,22 @@
-import { useState } from "react";
+import { useNavBar } from "./hooks";
+
+import type { NavBarPropsType } from "../types/components";
 
 
+export const NavBar = (props:NavBarPropsType) => {
 
-
-export const NavBar = () => {
-
-	const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-	const [themeIcon, setThemeIcon] = useState(theme === "light" ? "☀️" : "🌙");
-
-	const handleThemeToggle = () => {
-		const newTheme = theme === "light" ? "dark" : "light";
-		setTheme(newTheme);
-		setThemeIcon(newTheme === "light" ? "☀️" : "🌙");
-		localStorage.setItem("theme", newTheme);
-		document.body.classList.toggle("dark", newTheme === "dark");
-	}
+	const { 
+		themeIcon, 
+		handleThemeToggle,
+		getInitials 
+	} = useNavBar(props);
 
 	return (
 		<header className="navbar">
 			<div className="container navbar-content">
 
 				<a href="#" className="logo">
-					IU<span>.</span>
+					{getInitials()}<span>.</span>
 				</a>
 
 				<nav>

@@ -1,12 +1,16 @@
+import type { FooterPropsType } from "../types/components"
 
 
 
-export const Footer = () => {
+export const Footer = (props: FooterPropsType) => {
+
+	const { name, lastName } = props;
+
 	return (
 		<footer>
 			<div className="container">
 					<p>
-							© 2026 Ivan Usheff
+						© {new Date().getFullYear()} {name} {lastName}
 					</p>
 			</div>
 		</footer>
