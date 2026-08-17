@@ -1,9 +1,10 @@
 import { About, Contact, Footer, Hero, NavBar, Projects, Skills } from "./components"
-import { PERSONAL_CONFIG } from "./config/personal.config";
+import { useLanguage } from "./utils";
 
 function App() {
 
-  const { hero, about, skills, projects, contact } = PERSONAL_CONFIG;
+  const { config } = useLanguage()
+  const { hero, about, skills, projects, contact } = config;
 
   return (
     <>

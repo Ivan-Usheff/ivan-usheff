@@ -134,6 +134,39 @@ nav a:hover {
   font-size: 1.3rem;
 }
 
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.language-selector button {
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.language-selector button:hover {
+  color: var(--primary);
+}
+
+.language-selector button.active {
+  color: var(--primary);
+}
+
+.language-dropdown {
+  background: var(--background);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  padding: 8px 10px;
+
+  cursor: pointer;
+}
 
 /* =========================
    HERO
