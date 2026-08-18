@@ -12,7 +12,7 @@ export const LanguageDropdown = () => {
   const [open, setOpen] = useState(false);
 
   const selectedLanguage = languages.find(
-    item => item.code === language.toLowerCase()
+    item => item.code === language
   );
 
   return (

@@ -1,4 +1,3 @@
-import type { ConfigUISectionsType } from ".";
 
 export type SkillLevelType = 'Beginner' | 'Intermediate' | 'Advanced';
 

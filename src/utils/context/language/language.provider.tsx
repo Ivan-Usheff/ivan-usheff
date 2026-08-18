@@ -34,7 +34,7 @@ export const LanguageProvider = ({
       current: getInitialLanguage()
     }
   );
-  const config = LANGUAGE_CONFIG[state.current].content;
+  const config = LANGUAGE_CONFIG[state.current]!.content;
   const languages = Object.values(LANGUAGE_CONFIG);
 
   
