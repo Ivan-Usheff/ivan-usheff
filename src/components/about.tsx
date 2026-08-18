@@ -1,17 +1,17 @@
-import type { AboutType } from "../types"
+import type { AboutPropsType } from "../types"
 
 
 
-export const About = (props:AboutType) => {
+export const About = (props:AboutPropsType) => {
 
-  const { description } = props;
+  const { description, ui } = props;
 
   return (
     <section id="about" className="section">
       <div className="container">
 
         <h2 className="section-title">
-          Sobre mí
+          {ui}
         </h2>
 
         <p className="about-text">

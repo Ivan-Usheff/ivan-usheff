@@ -12,7 +12,7 @@ const InitialTheme = (): Theme => {
 
 export const useNavBar = (props: NavBarPropsType) => {
 
-  const { name, lastName } = props;
+  const { name, lastName, ui } = props;
 	const [theme, setTheme] = useState(InitialTheme());
   const themeIcon = theme === "light" ? "🌙" : "☀️";
 
@@ -38,6 +38,7 @@ export const useNavBar = (props: NavBarPropsType) => {
 	}, [theme]);
   
   return {
+    ui, 
     themeIcon, 
     handleThemeToggle,
     getInitials

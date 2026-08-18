@@ -1,10 +1,10 @@
-import type { HeroType } from "../types"
+import type { HeroPropsType } from "../types"
 
 
 
-export const Hero = (props: HeroType) => {
+export const Hero = (props: HeroPropsType) => {
 
-	const { name, lastName, role, description, links, cv } = props;
+	const { name, lastName, role, description, links, cv, ui } = props;
 	const cvurl = cv ? `${import.meta.env.BASE_URL}/cv/${cv}` : `${import.meta.env.BASE_URL}/cv/`;
 
 	const actionsLinks = () => {
@@ -39,7 +39,7 @@ export const Hero = (props: HeroType) => {
 			<div className="container hero-content">
 
 				<p className="subtitle">
-					Hola, soy
+					{ui.subtitle}
 				</p>
 
 				<h1>
@@ -57,7 +57,7 @@ export const Hero = (props: HeroType) => {
 				<div className="hero-actions">
 
 					<a href="#projects" className="button primary">
-						Ver proyectos
+						{ui.viewProjects}
 					</a>
 
 					{cvDownloaderLink()}

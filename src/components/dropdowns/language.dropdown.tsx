@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useLanguage } from "../../utils";
+import type { LanguageKeyType } from "../../types";
 
 export const LanguageDropdown = () => {
 
@@ -7,21 +9,60 @@ export const LanguageDropdown = () => {
     languages,
     setLanguage
   } = useLanguage();
+  const [open, setOpen] = useState(false);
+
+  const selectedLanguage = languages.find(
+    item => item.code === language.toLowerCase()
+  );
 
   return (
-    <select
-      value={language}
-      onChange={(event) =>
-        setLanguage( event.target.value as typeof language )
-      }
-      className="language-dropdown"
-    >
-      {languages.map(({ code, flag, label }) => (
-          <option key={code} value={code} >
-            {flag} {label}
-          </option>
-        )
+
+    <div className="language-select">
+
+      <button
+        type="button"
+        className="language-select-button"
+        onClick={() => setOpen(current => !current)}
+      >
+        {selectedLanguage && (
+          <>
+            <span
+              className={`fi fi-${selectedLanguage.flag}`}
+            />
+
+            <span>
+              {selectedLanguage.label}
+            </span>
+
+            <span>▼</span>
+          </>
+        )}
+      </button>
+
+      {open && (
+        <div className="language-select-options">
+
+          {languages.map(({ code, flag, label }) => (
+            <button
+              key={code}
+              type="button"
+              className="language-select-option"
+              onClick={() => {
+                setLanguage(code.toLocaleLowerCase() as LanguageKeyType);
+                setOpen(false);
+              }}
+            >
+              <span className={`fi fi-${flag}`} />
+
+              <span>
+                {label}
+              </span>
+            </button>
+          ))}
+
+        </div>
       )}
-    </select>
+
+    </div>
   );
 };

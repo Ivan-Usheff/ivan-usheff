@@ -1,10 +1,10 @@
-import type { ProjectType } from "../types"
+import type { ProjectPropsParamsType } from "../types"
 
 
 
-export const Projects = (props: ProjectType) => {
+export const Projects = (props: ProjectPropsParamsType) => {
 
-  const { description, projects } = props;
+  const { description, projects, ui } = props;
 
   const projectCards = () => {
     if(!projects || projects.length === 0) 
@@ -46,7 +46,7 @@ export const Projects = (props: ProjectType) => {
       <div className="container">
 
         <h2 className="section-title">
-          Proyectos
+          {ui}
         </h2>
 
         <p className="section-description">

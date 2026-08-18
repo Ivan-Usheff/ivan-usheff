@@ -1,3 +1,4 @@
+import type { ConfigUIHeroType } from ".";
 import type { LinkType } from "./utils";
 
 
@@ -12,4 +13,8 @@ export type HeroType = {
   cv?: HeroCVType;
   image?: string;
   links: HeroLinksType[];
+}
+
+export type HeroPropsType = HeroType & {
+  ui: ConfigUIHeroType;
 }

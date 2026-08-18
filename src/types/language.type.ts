@@ -14,12 +14,14 @@ export type LanguageKeyLabelType = {
   'dt': "Deutsche"
 }
 
+export type LanguageFlagType = "es" | "gb" | "de";
+
 export type LanguageKeyType = keyof typeof LANGUAGE_LABELS;
 
 export type LanguageConfigType = {
   code: Uppercase<LanguageKeyType>;
   label: typeof LANGUAGE_LABELS[LanguageKeyType];
-  flag: string;
+  flag: LanguageFlagType;
   content: ConfigType;
 }
 

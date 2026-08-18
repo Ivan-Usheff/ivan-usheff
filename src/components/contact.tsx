@@ -1,9 +1,9 @@
-import type { ContactType } from "../types"
+import type { ContactPropType } from "../types"
 
 
-export const Contact = (props: ContactType) => {
+export const Contact = (props: ContactPropType) => {
 
-  const { message, links } = props
+  const { message, links, ui } = props
 
   const linksList = () => {
     return links.map((link, index) => {
@@ -21,7 +21,7 @@ export const Contact = (props: ContactType) => {
       <div className="container contact">
 
         <h2 className="section-title">
-          Contacto
+          {ui}
         </h2>
 
         <p>{message}</p>

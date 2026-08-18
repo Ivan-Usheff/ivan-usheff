@@ -1,14 +1,34 @@
 {
   "code": "en",
   "label": "English",
-  "flag": "",
+  "flag": "gb",
   "content": {
+    "ui": {
+      "navbar": {
+        "about": "About me",
+        "skills": "Technologies",
+        "projects": "Projects",
+        "contact": "Contact",
+        "theme": "Change theme"
+      },
+      "hero": {
+        "subtitle": "Hi, i'm",
+        "viewProjects": "View projects",
+        "downloadCV": "Download CV"
+      },
+      "sections": {
+        "about": "About me",
+        "skills": "Technologies",
+        "projects": "Projects",
+        "contact": "Contact"
+      }
+    },
     "hero": {
       "name": "Ivan",
       "lastName": "Usheff",
       "role": "Backend / Full Stack Developer",
       "description": "Software developer specialized in backend applications, APIs, and microservices architectures, primarily using TypeScript, NestJS, and Node.js.",
-      "cv": "Ivan_Usheff_cv.pdf",
+      "cv": "Ivan_Usheff_cv.en.pdf",
       "links": [
         {
           "name": "GitHub",
@@ -81,11 +101,11 @@
               "name": "GitHub",
               "url": "#",
               "icon": "github",
-              "target": true
+              "target": false
             },
             {
               "name": "Learn more",
-              "url": "https://github.com/Ivan-Usheff/ivan-usheff/blob/main/src/config/readme/config_service.md",
+              "url": "https://github.com/Ivan-Usheff/ivan-usheff/blob/main/src/config/readme/config_service.en.md",
               "target": true
             }
           ]
