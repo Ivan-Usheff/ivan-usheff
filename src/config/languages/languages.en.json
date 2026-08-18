@@ -127,10 +127,10 @@
               "target": true
             },
             {
-              "name": "Architecture",
+              "name": "Learn more",
               "url": "https://github.com/Ivan-Usheff/ivan-usheff/blob/main/src/config/readme/company_bff.en.md",
               "icon": "github",
-              "target": false
+              "target": true
             }
           ]
         },
@@ -147,6 +147,12 @@
             {
               "name": "GitHub",
               "url": "#",
+              "icon": "github",
+              "target": false
+            },
+            {
+              "name": "Learn more",
+              "url": "https://github.com/Ivan-Usheff/ivan-usheff/blob/main/src/config/readme/common_library.en.md",
               "icon": "github",
               "target": true
             }
