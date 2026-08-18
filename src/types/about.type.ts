@@ -6,3 +6,7 @@ export type AboutType = {
   image?: string;
   media?: LinkType[];
 }
+
+export type AboutPropsType = AboutType & {
+  ui: string;
+}

@@ -13,3 +13,7 @@ export type ProjectType = {
   description: string;
   projects: ProjectPropsType[];
 }
+
+export type ProjectPropsParamsType = ProjectType & {
+  ui: string
+}

@@ -1,12 +1,14 @@
-import type { SkillType } from "../types"
+import type { SkillPropsType } from "../types"
 
 
-export const Skills = (props: {skills: SkillType[]}) => {
+export const Skills = (props: SkillPropsType) => {
 
-	const skills = () => {
-		if(props.skills.length === 0) 
+	const { skills, ui } = props
+
+	const skillsRender = () => {
+		if(skills.length === 0) 
 			return null;
-		return props.skills.map((skill, index) => {
+		return skills.map((skill, index) => {
 			const { name, level, experience } = skill;
 			return (
 				<span key={index}>{name} {level ? `(${level})` : ''} {experience && `(${experience} años)`}</span>
@@ -19,12 +21,12 @@ export const Skills = (props: {skills: SkillType[]}) => {
 			<div className="container">
 
 				<h2 className="section-title">
-					Tecnologías
+					{ui}
 				</h2>
 
 				<div className="skills">
 
-					{skills()}
+					{skillsRender()}
 
 				</div>
 

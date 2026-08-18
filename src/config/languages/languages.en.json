@@ -1,0 +1,198 @@
+{
+  "code": "en",
+  "label": "English",
+  "flag": "gb",
+  "content": {
+    "ui": {
+      "navbar": {
+        "about": "About me",
+        "skills": "Technologies",
+        "projects": "Projects",
+        "contact": "Contact",
+        "theme": "Change theme"
+      },
+      "hero": {
+        "subtitle": "Hi, i'm",
+        "viewProjects": "View projects",
+        "downloadCV": "Download CV"
+      },
+      "sections": {
+        "about": "About me",
+        "skills": "Technologies",
+        "projects": "Projects",
+        "contact": "Contact"
+      }
+    },
+    "hero": {
+      "name": "Ivan",
+      "lastName": "Usheff",
+      "role": "Backend / Full Stack Developer",
+      "description": "Software developer specialized in backend applications, APIs, and microservices architectures, primarily using TypeScript, NestJS, and Node.js.",
+      "cv": "Ivan_Usheff_cv.en.pdf",
+      "links": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/Ivan-Usheff",
+          "icon": "github",
+          "target": true
+        }
+      ]
+    },
+    "about": {
+      "description": "I am a software developer and have been living in Chile for the past 8 years. My journey into technology began with studies in video game development, where I acquired my first programming foundations. During the pandemic, I decided to turn that interest into a profession and began learning independently through online courses and personal projects, continuously expanding my knowledge until I landed my first professional opportunity as a developer.\nSince then, I have worked on projects for Sbpay, Cencosud, and Walmart Chile, contributing to backend and full stack development, system integrations, and service-based architectures. I currently work primarily with TypeScript, NestJS, Node.js, Java, Spring Boot, PostgreSQL, MongoDB, and Docker. I am looking to continue growing as a developer, take on increasingly complex technical challenges, and contribute to teams where I can keep learning and building high-quality solutions.",
+      "image": "",
+      "media": []
+    },
+    "skills": [
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "Node.js"
+      },
+      {
+        "name": "NestJS"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "PostgreSQL"
+      },
+      {
+        "name": "MongoDB"
+      },
+      {
+        "name": "TypeORM"
+      },
+      {
+        "name": "Docker"
+      },
+      {
+        "name": "Git"
+      },
+      {
+        "name": "WebSockets"
+      },
+      {
+        "name": "REST APIs"
+      },
+      {
+        "name": "Microservices"
+      }
+    ],
+    "projects": {
+      "description": "Some personal and professional projects I have worked on.",
+      "projects": [
+        {
+          "type": "Backend",
+          "name": "Config Service",
+          "technologies": [
+            "NestJS",
+            "TypeScript",
+            "PostgreSQL"
+          ],
+          "description": "Centralized configuration service designed for microservices architectures.",
+          "links": [
+            {
+              "name": "GitHub",
+              "url": "#",
+              "icon": "github",
+              "target": false
+            },
+            {
+              "name": "Learn more",
+              "url": "https://github.com/Ivan-Usheff/ivan-usheff/blob/main/src/config/readme/config_service.en.md",
+              "target": true
+            }
+          ]
+        },
+        {
+          "type": "Backend",
+          "name": "Company BFF",
+          "technologies": [
+            "NestJS",
+            "TypeScript",
+            "WebSockets"
+          ],
+          "description": "Backend for Frontend responsible for connecting client applications with multiple microservices.",
+          "links": [
+            {
+              "name": "GitHub",
+              "url": "#",
+              "icon": "github",
+              "target": true
+            },
+            {
+              "name": "Architecture",
+              "url": "#",
+              "icon": "github",
+              "target": false
+            }
+          ]
+        },
+        {
+          "type": "Library",
+          "name": "Common Library",
+          "technologies": [
+            "NestJS",
+            "TypeScript",
+            "WebSockets"
+          ],
+          "description": "Reusable library for NestJS projects containing modules, decorators, base entities, and common utilities.",
+          "links": [
+            {
+              "name": "GitHub",
+              "url": "#",
+              "icon": "github",
+              "target": true
+            }
+          ]
+        },
+        {
+          "type": "Personal Project",
+          "name": "RPG 2D",
+          "technologies": [
+            "Python",
+            "Pygame"
+          ],
+          "description": "Personal project focused on developing a 2D RPG while applying software architecture concepts, object-oriented programming, and game loop design.",
+          "links": [
+            {
+              "name": "GitHub",
+              "url": "#",
+              "icon": "github",
+              "target": true
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "message": "I am interested in new professional opportunities related to Backend and Full Stack development.",
+      "links": [
+        {
+          "name": "Email",
+          "url": "mailto:iusheff@gmail.com",
+          "icon": "email",
+          "target": false
+        },
+        {
+          "name": "GitHub",
+          "url": "https://github.com/Ivan-Usheff",
+          "icon": "github",
+          "target": true
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/ivan-usheff",
+          "icon": "linkedin",
+          "target": true
+        }
+      ]
+    }
+  }
+}

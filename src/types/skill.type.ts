@@ -6,3 +6,8 @@ export type SkillType = {
   level?: SkillLevelType;
   experience?: number;
 };
+
+export type SkillPropsType = {
+  skills: SkillType[];
+  ui: string;
+}
