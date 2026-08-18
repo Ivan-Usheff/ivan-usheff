@@ -101,7 +101,7 @@
               "name": "GitHub",
               "url": "#",
               "icon": "github",
-              "target": true
+              "target": false
             },
             {
               "name": "Ver mas",
@@ -124,13 +124,13 @@
               "name": "GitHub",
               "url": "#",
               "icon": "github",
-              "target": true
+              "target": false
             },
             {
               "name": "Arquitectura",
-              "url": "#",
+              "url": "https://github.com/Ivan-Usheff/ivan-usheff/blob/main/src/config/readme/company_bff.es.md",
               "icon": "github",
-              "target": false
+              "target": true
             }
           ]
         },
